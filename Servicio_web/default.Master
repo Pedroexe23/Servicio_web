@@ -6,7 +6,7 @@
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   <link href="Css/Style.css"  rel="stylesheet" type="text/css" />
+   <link href="../Css/Style.css"  rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
     <title></title>
 </head>
@@ -25,8 +25,8 @@
             Administración de Puntos de Carga
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Puntos de Carga/Registrar.aspx">Registrar Puntos de Carga</a></li>
-            <li><a class="dropdown-item" href="../Puntos de Carga/Visualizar.aspx">Visualizar Puntos de Carga </a></li>
+            <li><a class="dropdown-item" href="../Puntos de Carga/RegistrarPunto.aspx">Registrar Puntos de Carga</a></li>
+            <li><a class="dropdown-item" href="../Puntos de Carga/VisualizarPunto.aspx">Visualizar Puntos de Carga </a></li>
             
 
           </ul>
@@ -36,8 +36,8 @@
            Administración de Estaciones de Servicio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Estaciones de Servicio/Registrar.aspx">Registrar estaciones </a></li>
-            <li><a class="dropdown-item" href="../Estaciones de Servicio/Visualizar.aspx">Visualizar estaciones</a></li>
+            <li><a class="dropdown-item" href="../Estaciones de Servicio/RegistrarEstacion.aspx">Registrar estaciones </a></li>
+            <li><a class="dropdown-item" href="../Estaciones de Servicio/VisualizarEstacion.aspx">Visualizar estaciones</a></li>
 
           </ul>
         </li>

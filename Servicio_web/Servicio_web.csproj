@@ -70,6 +70,9 @@
     <Content Include="Css\Style.css" />
     <Content Include="default.aspx" />
     <Content Include="Estaciones de Servicio\RegistrarEstacion.aspx" />
+    <Content Include="Estaciones de Servicio\VisualizarEstacion.aspx" />
+    <Content Include="Puntos de Carga\RegistrarPunto.aspx" />
+    <Content Include="Puntos de Carga\VisualizarPunto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,7 +97,28 @@
     <Compile Include="Estaciones de Servicio\RegistrarEstacion.aspx.designer.cs">
       <DependentUpon>RegistrarEstacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Estaciones de Servicio\VisualizarEstacion.aspx.cs">
+      <DependentUpon>VisualizarEstacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estaciones de Servicio\VisualizarEstacion.aspx.designer.cs">
+      <DependentUpon>VisualizarEstacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puntos de Carga\RegistrarPunto.aspx.cs">
+      <DependentUpon>RegistrarPunto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Puntos de Carga\RegistrarPunto.aspx.designer.cs">
+      <DependentUpon>RegistrarPunto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Puntos de Carga\VisualizarPunto.aspx.cs">
+      <DependentUpon>VisualizarPunto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Puntos de Carga\VisualizarPunto.aspx.designer.cs">
+      <DependentUpon>VisualizarPunto.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.Master" />
@@ -113,9 +137,7 @@
       <Name>Servicio_web_Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Puntos de Carga\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
