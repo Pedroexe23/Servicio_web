@@ -42,6 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DAL\DireccionDAL.cs" />
+    <Compile Include="DAL\EstacionDAL.cs" />
+    <Compile Include="DAL\HoraDAL.cs" />
+    <Compile Include="DAL\PuntoDAL.cs" />
+    <Compile Include="DAL\RegionDAL.cs" />
     <Compile Include="DTO\Direccion.cs" />
     <Compile Include="DTO\Estacion.cs" />
     <Compile Include="DTO\Horario_atencion.cs" />
@@ -50,7 +55,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
     <Folder Include="Patials\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
