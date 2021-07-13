@@ -52,10 +52,9 @@
     <Compile Include="DTO\Horario_atencion.cs" />
     <Compile Include="DTO\PuntoCarga.cs" />
     <Compile Include="DTO\Region.cs" />
+    <Compile Include="Patials\RegionPatials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Patials\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
