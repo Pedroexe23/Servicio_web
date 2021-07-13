@@ -153,11 +153,41 @@ namespace Servicio_web.Estaciones_de_Servicio
 
         protected void rutCV_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            string Rut = rutxt.Text.Trim();
-            if (string.IsNullOrEmpty(Rut))
-            { /*Caso que la hora venga vacía */
-                HICV.ErrorMessage = "Debe ingresar hora";
+            String rut = rutxt.Text.Trim();
+
+            if (rut == string.Empty)
+            {
+                /*Caso que el rut venga vacío */
+                rutCV.ErrorMessage = "Debe ingresar el Rut";
                 args.IsValid = false;
+            }
+            else
+            {
+                /* Rut válido es de la forma 12345678-9*/
+
+                String[] rutArray = rut.Split('-');
+
+
+                if (rutArray.Length == 2)
+                {
+                    if (rutArray[1].Length != 1)
+                    {
+                        /*Caso que el digito verificador tiene mas de 1 caracter*/
+                        rutCV.ErrorMessage = "El dígito verificador debe tener un caracter";
+                        args.IsValid = false;
+                    }
+                    else
+                    {
+                        /*Caso que cumple formato*/
+                        args.IsValid = true;
+                    }
+                }
+                else
+                {
+                    /*Caso en que rut no tiene un solo guión*/
+                    rutCV.ErrorMessage = "El Rut debe poseer un guión";
+                    args.IsValid = false;
+                }
             }
 
         }
@@ -170,6 +200,53 @@ namespace Servicio_web.Estaciones_de_Servicio
                 HICV.ErrorMessage = "Debe ingresar hora";
                 args.IsValid = false;
             }
+            else
+            {
+                /*Hora valida 09:21*/
+                string[] HoraArray = Hora.Split(':');
+                /*
+                 * 
+                 * HoraArray[0]=09
+                   HoraArray[1]=21
+                 */
+                if (HoraArray.Length == 2)
+                {
+
+                    int a = Convert.ToInt32(HoraArray[0].Trim());
+                    int b = Convert.ToInt32(HoraArray[1].Trim());
+
+                    if (a >= 0 && a <= 23)
+                    {
+                        /*Si la hora es mayor o igual a 0 y menor o igual a 23 para da formato la hora*/
+                        if (b >= 0 && b <= 59)
+                        {
+                            /*Si la hora es mayor o igual a 0 y menor o igual a 59
+                             * para da formato en minutos el argumento es valido*/
+                            args.IsValid = true;
+                        }
+                        else
+                        {
+                            /*en caso que los minutos no cumplan*/
+                            HICV.ErrorMessage = "Error de minutos ingrese nuevamente";
+                            args.IsValid = false;
+                        }
+
+                    }
+                    else
+                    {
+                        /*en caso que la hora no cumplan*/
+                        HICV.ErrorMessage = "Error de Hora ingrese nuevamente";
+                        args.IsValid = false;
+                    }
+
+                }
+                else
+                { /*Caso de que la hora no tiene doble punto*/
+                    HICV.ErrorMessage = "Error de hora";
+                    args.IsValid = false;
+                }
+
+            }
         }
 
         protected void HCCV_ServerValidate(object source, ServerValidateEventArgs args)
@@ -177,10 +254,56 @@ namespace Servicio_web.Estaciones_de_Servicio
             string Hora = HoraFTxt.Text.Trim();
             if (string.IsNullOrEmpty(Hora))
             { /*Caso que la hora venga vacía */
-                HICV.ErrorMessage = "Debe ingresar hora";
+                HCCV.ErrorMessage = "Debe ingresar hora";
                 args.IsValid = false;
             }
+            else
+            {
+                /*Hora valida 09:21*/
+                string[] HoraArray = Hora.Split(':');
+                /*
+          * 
+          * HoraArray[0]=09
+            HoraArray[1]=21
+          */
+                if (HoraArray.Length == 2)
+                {
+                    int a = Convert.ToInt32(HoraArray[0].Trim());
+                    int b = Convert.ToInt32(HoraArray[1].Trim());
+                    if (a >= 0 && a <= 23)
+                    {
+                        /*Si la hora es mayor o igual a 0 y menor o igual a 23 para da formato la hora*/
+                        if (b >= 0 && b <= 59)
+                        {
+                            /*Si la hora es mayor o igual a 0 y menor o igual a 59
+  * para da formato en minutos el argumento es valido*/
+                            args.IsValid = true;
+                        }
+                        else
+                        {
 
+                            /*en caso que los minutos no cumplan*/
+                            HCCV.ErrorMessage = "Error de minutos ingrese nuevamente";
+                            args.IsValid = false;
+                        }
+
+                    }
+                    else
+                    {
+                        /*en caso que la hora no cumplan*/
+                        HCCV.ErrorMessage = "Error de Hora ingrese nuevamente";
+                        args.IsValid = false;
+                    }
+
+                }
+                else
+                {
+                    /*Caso de que la hora no tiene doble punto*/
+                    HCCV.ErrorMessage = "Error de hora";
+                    args.IsValid = false;
+                }
+
+            }
         }
     }
 }
