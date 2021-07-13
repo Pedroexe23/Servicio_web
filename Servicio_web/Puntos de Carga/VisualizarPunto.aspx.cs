@@ -218,7 +218,7 @@ namespace Servicio_web.Puntos_de_Carga
         protected void Tipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             int Elemento = Convert.ToInt32(Filtrord.SelectedValue);
-            string Fecha = DateTime.Now.ToString("dd/MM/yyyy");
+            string Fecha = "";
             string tipo = "";
             List<PuntoCarga> Puntos_de_Cargas = new PuntoDAL().GetPuntoCargas();
             dt.Columns.AddRange(new DataColumn[5] {
@@ -236,7 +236,7 @@ namespace Servicio_web.Puntos_de_Carga
                 PC.Tipo = Puntos_de_Cargas[i].Tipo;
                 PC.Capacidadmaxima = Puntos_de_Cargas[i].Capacidadmaxima;
                 PC.Fechavencimiento = Puntos_de_Cargas[i].Fechavencimiento;
-                Fecha = PC.Fechavencimiento.ToString("dd/MM/yyyy");
+                Fecha = Puntos_de_Cargas[i].Fechavencimiento.ToString("dd/MM/yyyy");
                 if (PC.Tipo == 1)
                 {
                     tipo = "Trafico";

@@ -56,7 +56,7 @@ namespace Servicio_web.Puntos_de_Carga
                   * se agregara un error a la lista  */
             try
             {
-                Convert.ToDateTime(Fechatxt.Text.Trim());
+                fechavencimiento = Convert.ToDateTime(Fechatxt.Text.Trim());
             }
             catch (Exception)
             {
