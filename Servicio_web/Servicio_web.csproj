@@ -69,8 +69,7 @@
   <ItemGroup>
     <Content Include="Css\Style.css" />
     <Content Include="default.aspx" />
-    <Content Include="Puntos de Carga\Registrar.aspx" />
-    <Content Include="Puntos de Carga\Visualizar.aspx" />
+    <Content Include="Estaciones de Servicio\RegistrarEstacion.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,21 +87,14 @@
     <Compile Include="default.Master.designer.cs">
       <DependentUpon>default.Master</DependentUpon>
     </Compile>
+    <Compile Include="Estaciones de Servicio\RegistrarEstacion.aspx.cs">
+      <DependentUpon>RegistrarEstacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estaciones de Servicio\RegistrarEstacion.aspx.designer.cs">
+      <DependentUpon>RegistrarEstacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Puntos de Carga\Registrar.aspx.cs">
-      <DependentUpon>Registrar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Puntos de Carga\Registrar.aspx.designer.cs">
-      <DependentUpon>Registrar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Puntos de Carga\Visualizar.aspx.cs">
-      <DependentUpon>Visualizar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Puntos de Carga\Visualizar.aspx.designer.cs">
-      <DependentUpon>Visualizar.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.Master" />
@@ -113,6 +105,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Servicio_web_Model\Servicio_web_Model.csproj">
@@ -121,7 +114,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Estaciones de Servicio\" />
+    <Folder Include="Puntos de Carga\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Servicio_web.Puntos_de_Carga
+namespace Servicio_web.Estaciones_de_Servicio
 {
 
 
-    public partial class Registrar
+    public partial class RegistrarEstacion
     {
 
         /// <summary>

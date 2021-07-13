@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Registrar.aspx.cs" Inherits="Servicio_web.Puntos_de_Carga.Registrar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="RegistrarEstacion.aspx.cs" Inherits="Servicio_web.Estaciones_de_Servicio.RegistrarEstacion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="row mt-5">
+    <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-6 mx-auto ">
 
             <asp:Label ID="RegistroLabel" CssClass="text-success h1" Text="" runat="server" />
