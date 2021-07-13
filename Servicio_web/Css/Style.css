@@ -1,0 +1,43 @@
+﻿
+.labels{
+    display: inline-block;
+    width:170px;
+}
+
+.labels2 {
+    display: inline-block;
+    margin-left:10px;
+    margin-right:10px;
+    
+}
+
+.Radios label{
+    margin-right:25px;
+}
+
+
+.inputs{
+    font:1em sans-serif;
+    box-sizing:border-box;
+    border: 1px solid #999;
+    margin-top: 8px;
+}
+.inputs2 {
+    font: 1em sans-serif;
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+.derecha {
+    float: right;
+    width:50%;
+    height:400px;
+    position:relative;
+
+}
+.izquierda{
+    float:left;
+   
+}
+
+
